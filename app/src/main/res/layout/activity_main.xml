@@ -35,6 +35,7 @@
         android:textColor="#fff"
         android:textAllCaps="false"
         android:textSize="18sp"
+        app:cornerRadius="18dp"
         app:layout_constraintBottom_toTopOf="@+id/tvBelowButon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -50,47 +51,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
+    <EditText
+        android:id="@+id/etUsername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
+        android:background="@drawable/rounded_edittext"
+        android:hint="@string/phUsername"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#000"
-            android:hint="@string/phUsername"
-            android:textColor="#fff"
-            android:textColorHint="@color/hintTextColor"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
+    <EditText
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="34dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="@string/phPassword"
+        android:textColor="#fff"
         app:layout_constraintBottom_toTopOf="@+id/tvErrorMsg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#000"
-            android:hint="@string/phPassword"
-            android:textColor="#fff"
-            android:textColorHint="@color/hintTextColor"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvErrorMsg"
@@ -113,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout5">
+        app:layout_constraintBottom_toTopOf="@+id/etUsername">
 
         <ImageView
             android:id="@+id/imgLogo"
