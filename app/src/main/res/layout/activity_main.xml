@@ -128,4 +128,5 @@
             android:textSize="22sp"
             android:textStyle="bold"/>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
