@@ -9,4 +9,8 @@
     <string name="phPassword">Password</string>
     <string name="phConfirmPassword">Confirm Password</string>
     <string name="errorMessage">Please fill all the required field.</string>
+    <string name="sign_in">Sign in</string>
+    <string name="createyouraccount">Create your account</string>
+    <string name="fullname">Full name</string>
+    <string name="alreadyhaveaccount">Already have an account?</string>
 </resources>
