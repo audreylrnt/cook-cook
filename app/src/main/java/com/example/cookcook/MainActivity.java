@@ -2,7 +2,9 @@ package com.example.cookcook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegister);
 
+        //styling & show/hide error message
         tvError.setVisibility(View.INVISIBLE);
         etUsername.getBackground().setAlpha(50);
         etPassword.getBackground().setAlpha(50);
@@ -31,10 +34,19 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //validation to match input with saved data
                 String username = etUsername.getText() + "";
-                if(username.equals("")){
-                    tvError.setText(getString(R.string.errorMessage));
-                    tvError.setVisibility(View.VISIBLE);
+                String password = etPassword.getText() + "";
+                if(username.equals("") || password.equals("")){
+                    errorMessage(getString(R.string.errorMessageEmpty));
+                    return;
+                }
+                if(!username.equals(UserDB.users.get(0).getUserName())) {
+                    errorMessage(getString(R.string.errorMessageWrongUsername));
+                    return;
+                }
+                if(!password.equals(UserDB.users.get(0).getPassword())) {
+                    errorMessage(getString(R.string.errorMessageWrongPassword));
                     return;
                 }
                 // sample code
@@ -42,5 +54,21 @@ public class MainActivity extends AppCompatActivity {
                 tvError.setVisibility(View.VISIBLE);
             }
         });
+
+        //move to register page
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toRegister = new Intent(MainActivity.this, Register.class);
+                startActivity(toRegister);
+                finish();
+            }
+        });
+    }
+
+    //function to show error message
+    public void errorMessage(String errorMsg) {
+        tvError.setText(errorMsg);
+        tvError.setVisibility(View.VISIBLE);
     }
 }
