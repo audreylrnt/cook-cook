@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         tvError = findViewById(R.id.tvErrorMsg);
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
+
         tvError.setVisibility(View.INVISIBLE);
         etUsername.getBackground().setAlpha(50);
         etPassword.getBackground().setAlpha(50);
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //validation to match input with saved data
                 String username = etUsername.getText() + "";
                 String password = etPassword.getText() + "";
 

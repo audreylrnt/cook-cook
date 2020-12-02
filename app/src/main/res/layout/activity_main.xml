@@ -21,6 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:paddingBottom="18dp"
+        android:paddingTop="0dp"
         android:text="@string/textBtnText"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,10 +35,10 @@
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/primaryBtnText"
-        android:textColor="#fff"
         android:textAllCaps="false"
+        android:textColor="#fff"
         android:textSize="18sp"
         app:cornerRadius="18dp"
         app:layout_constraintBottom_toTopOf="@+id/tvBelowButon"
@@ -66,7 +68,7 @@
         android:textColor="#fff"
         app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -74,10 +76,11 @@
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/rounded_edittext"
         android:inputType="textPassword"
         android:hint="@string/phPassword"
+        android:inputType="textPassword"
         android:textColor="#fff"
         app:layout_constraintBottom_toTopOf="@+id/tvErrorMsg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,11 +103,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/etUsername">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imgLogo"
@@ -123,6 +126,7 @@
             android:textColor="#fff"
             android:textSize="48sp"
             android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -130,7 +134,7 @@
             android:text="@string/pageDesc"
             android:textColor="#797979"
             android:textSize="22sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">CookCook</string>
     <string name="pageName">Login</string>
+    <string name="pageName2">Register</string>
     <string name="pageDesc">Log in to your account</string>
+    <string name="pageDesc2">Create your account</string>
     <string name="primaryBtnText">Log In</string>
+    <string name="primaryBtnText2">Register</string>
     <string name="textBelowButton">Don\'t have an account yet?</string>
+    <string name="textBelowButton2">Already have an account?</string>
     <string name="textBtnText">Register</string>
+    <string name="textBtnText2">Sign in</string>
     <string name="phUsername">Username</string>
     <string name="phPassword">Password</string>
+    <string name="phFullName">Full Name</string>
     <string name="phConfirmPassword">Confirm Password</string>
     <string name="sign_in">Sign in</string>
     <string name="createyouraccount">Create your account</string>
