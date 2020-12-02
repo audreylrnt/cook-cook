@@ -14,7 +14,12 @@
     <string name="phPassword">Password</string>
     <string name="phFullName">Full Name</string>
     <string name="phConfirmPassword">Confirm Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="createyouraccount">Create your account</string>
+    <string name="fullname">Full name</string>
+    <string name="alreadyhaveaccount">Already have an account?</string>
     <string name="errorMessageEmpty">Please fill all the required field.</string>
+    <string name="errorMessageIllegalLogin">Please register yourself.</string>
     <string name="errorMessageWrongUsername">Username does not match.</string>
     <string name="errorMessageWrongPassword">Password does not match.</string>
     <string name="errorMessageWrongUsernameLength">Username must have at least 6 characters.</string>

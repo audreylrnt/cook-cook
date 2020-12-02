@@ -8,9 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView tvError;
@@ -23,13 +21,12 @@ public class MainActivity extends AppCompatActivity {
         tvError = findViewById(R.id.tvErrorMsg);
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
-        btnLogin = findViewById(R.id.btnLogin);
-        btnRegister = findViewById(R.id.btnRegister);
 
-        //styling & show/hide error message
         tvError.setVisibility(View.INVISIBLE);
         etUsername.getBackground().setAlpha(50);
         etPassword.getBackground().setAlpha(50);
+        btnRegister = findViewById(R.id.btnRegister);
+        btnLogin = findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,8 +34,13 @@ public class MainActivity extends AppCompatActivity {
                 //validation to match input with saved data
                 String username = etUsername.getText() + "";
                 String password = etPassword.getText() + "";
+
                 if(username.equals("") || password.equals("")){
                     errorMessage(getString(R.string.errorMessageEmpty));
+                    return;
+                }
+                if(UserDB.users.size() == 0) {
+                    errorMessage(getString(R.string.errorMessageIllegalLogin));
                     return;
                 }
                 if(!username.equals(UserDB.users.get(0).getUserName())) {
@@ -49,21 +51,17 @@ public class MainActivity extends AppCompatActivity {
                     errorMessage(getString(R.string.errorMessageWrongPassword));
                     return;
                 }
-                // sample code
-                tvError.setText("Welcome, " + username);
-                tvError.setVisibility(View.VISIBLE);
             }
         });
 
-        //move to register page
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toRegister = new Intent(MainActivity.this, Register.class);
-                startActivity(toRegister);
-                finish();
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 
     //function to show error message
