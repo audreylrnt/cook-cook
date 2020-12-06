@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 // sample code
                 tvError.setText("Welcome, " + username);
                 tvError.setVisibility(View.VISIBLE);
+                Intent intent = new Intent(MainActivity.this,Home.class);
+                startActivity(intent);
             }
         });
 
