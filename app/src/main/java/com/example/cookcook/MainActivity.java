@@ -12,10 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     TextView tvError;
     EditText etUsername, etPassword;
     Button btnLogin, btnRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegister);
-
         //styling & show/hide error message
         tvError.setVisibility(View.INVISIBLE);
         etUsername.getBackground().setAlpha(50);
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 //validation to match input with saved data
                 String username = etUsername.getText() + "";
                 String password = etPassword.getText() + "";
+                if(UserDB.users.size() == 0) {
+                    errorMessage(getString(R.string.errorMessageNoData));
+                    return;
+                }
                 if(username.equals("") || password.equals("")){
                     errorMessage(getString(R.string.errorMessageEmpty));
                     return;
@@ -50,10 +56,11 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 // sample code
-                tvError.setText("Welcome, " + username);
-                tvError.setVisibility(View.VISIBLE);
+//                tvError.setText("Welcome, " + username);
+//                tvError.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MainActivity.this,Home.class);
                 startActivity(intent);
+                finish();
             }
         });
 

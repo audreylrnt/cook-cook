@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#6B3F05</color>
     <color name="colorAccent">#BD9156</color>
     <color name="hintTextColor">#D7D7D7</color>
+    <color name="appTextColor">#333333</color>
 </resources>

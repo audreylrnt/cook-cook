@@ -14,10 +14,35 @@
     <string name="phPassword">Password</string>
     <string name="phFullName">Full Name</string>
     <string name="phConfirmPassword">Confirm Password</string>
+    <string name="errorMessageNoData">Please register first.</string>
     <string name="errorMessageEmpty">Please fill all the required field.</string>
     <string name="errorMessageWrongUsername">Username does not match.</string>
     <string name="errorMessageWrongPassword">Password does not match.</string>
     <string name="errorMessageWrongUsernameLength">Username must have at least 6 characters.</string>
     <string name="errorMessageWrongPasswordLength">Password must have at least 6 characters.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcomeMsg">Welcome,</string>
+    <string name="recipe1name">Tteokbokki (Korean Spicy Rice Cake)</string>
+    <string name="recipe1desc">Tteokbokki is a Korean street food snack made primarily of chewy rice cakes and fiery, funky gochujang chili paste.</string>
+    <string name="recipe1detail">1.  For the sauce: Pour the anchovy stock or water into a medium-sized pan. Add the sauce ingredients and bring to a boil. Make sure the paste is dissolved. Reduce the heat to medium.\n\n
+                        2.  For the rice cakes: Add the rice cakes and boil them until soft (roughly 7 to 10 minutes). Reduce to a simmer to thicken the sauce. Keep stirring to prevent the rice cakes from burning at the bottom of the pan\n\n
+                        3.  Add the fish cakes, cabbage, spring onions, and garlic. Simmer for an additional 5 minutes.\n\n
+                        4.  Season to taste with additional sugar and soy sauce, bearing in mind that the gochujang itself is spicy. Add the sesame oil, stir through and dish out into bowls. Top with sesame seeds if desired.</string>
+    <string name="recipe2name">Japanese Salmon Chazuke (Tea on Rice)</string>
+    <string name="recipe2desc">Chazuke is a Japanese dish made by pouring green tea, dashi or hot water over cooked rice. This recipe uses salmon, but you can use any topping as you like.</string>
+    <string name="recipe2detail">1.  Season salmon filets with salt. Preheat the Gourmet Roaster for 5 minutes. Roast salmon for 8 minutes or until surface is lightly browned. Carefully remove the skin and bones and break the salmon up into flakes using two forks.\n\n
+        2.  Place cooked rice in a strainer and rinse with hot water to remove excess starch. Drain the rice well.\n\n
+        3.  Shred nori seaweed and shiso leaves.\n\n
+        4.  In two serving bowls, place rice, salmon flakes and drizzle soy sauce. Top with nori seaweed, shiso leaves and wasabi paste.\n\n
+        5.  Brew green tea and pour around the inside edge of bowls to help topping keep its shape. Serve immediately.</string>
+    <string name="recipe3name">Nasi Goreng (Indonesian Fried Rice)</string>
+    <string name="recipe3desc">Make easy nasi goreng, add meat or make it a vegetarian meal and put fresh vegetables in.</string>
+    <string name="recipe3detail">1.  Boil rice in water or broth or water-broth combination until cooked. Rinse, drain and spread out on a baking sheet to cool. Prepare the rice at least 2 hours ahead, or preferably the day before, chilling in the refrigerator overnight.\n\n
+        2.  Whisk eggs with sesame oil and salt in a small bowl. In a small skillet, make 2 thin omelettes and cut into strips. Set aside.\n\n
+        3.  Heat a wok or large skillet over medium-high heat. Add the grapeseed oil and heat until it ripples.\n\n
+        4.  Add the shallot, ginger, garlic, and pepper and stir-fry for 2 minutes. Then add the chicken and shrimp and stir-fry for a further 2-3 minutes or until chicken is no longer pink.  Add the cooked rice and continue to stir-fry for 3 minutes.\n\n
+        5.  Stir in the sambal ulek, oyster or fish sauce and sweet soy sauce and continue to heat, stirring for 2 minutes.\n\n
+        6.  Turn onto large serving platter and garnish with the omelette strips, green onions and fresh cilantro. Serve hot.</string>
+    <string name="pageRecipe">Recipes</string>
+    <string name="btnBack">Back</string>
 </resources>
