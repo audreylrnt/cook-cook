@@ -26,17 +26,15 @@ public class RecipeDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_detail);
-        Intent fromRV = getIntent();
-        int position = fromRV.getIntExtra("position", 0);
-        Log.d("Detail", "position: " + position);
         appBarLayout = findViewById(R.id.appbar);
         tabLayout = findViewById(R.id.tablayout);
         viewPager = findViewById(R.id.viewpager);
         btnBack = findViewById(R.id.btnBack);
         tvRecipename = findViewById(R.id.detail_recipeName);
         recipeImg = findViewById(R.id.detail_recipeImg);
-        tvRecipename.setText(RecipeDB.recipeArrayList.get(position).getRecipeName());
-        recipeImg.setImageResource(RecipeDB.recipeArrayList.get(position).getRecipeImg());
+        int selected = SelectedRecipe.selectedRecipe.get(0);
+        tvRecipename.setText(RecipeDB.recipeArrayList.get(selected).getRecipeName());
+        recipeImg.setImageResource(RecipeDB.recipeArrayList.get(selected).getRecipeImg());
 
         TabViewPagerAdapter tabViewPagerAdapter = new TabViewPagerAdapter(getSupportFragmentManager());
         tabViewPagerAdapter.addFragment(new RDescriptionFragment(), "About Recipe");

@@ -21,6 +21,7 @@
     <string name="errorMessageWrongUsernameLength">Username must have at least 6 characters.</string>
     <string name="errorMessageWrongPasswordLength">Password must have at least 6 characters.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="listtitle">Currently available recipes:</string>
     <string name="welcomeMsg">Welcome,</string>
     <string name="recipe1name">Tteokbokki (Korean Spicy Rice Cake)</string>
     <string name="recipe1desc">Tteokbokki is a Korean street food snack made primarily of chewy rice cakes and fiery, funky gochujang chili paste.</string>
